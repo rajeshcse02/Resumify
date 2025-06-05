@@ -78,7 +78,8 @@ npm run dev
 5. Access the app
 Visit http://localhost:5173 to view the application locally.
 
-🚀 Deployment
+🚀 Deployment 
+<br/>
 🔹 Frontend Deployment (Vercel)
 1. Push client/ folder to GitHub.
 2. Go to Vercel, create a new project.
@@ -87,6 +88,7 @@ Visit http://localhost:5173 to view the application locally.
       - Output Directory: dist
 4. Add any environment variables if needed (API base URL).
 5. Deploy!
+<br/>
 🔸 Backend Deployment (Render)
 Push server/ folder to GitHub.
 Go to Render, create a new Web Service.
@@ -125,3 +127,42 @@ Backend .env:
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ```
+### 🔑 Key Frontend Routes
+
+* `/` – Homepage with all resume templates
+* `/login` – User login
+* `/register` – User registration
+* `/profile` – Profile page (shows email, allows password change)
+* `/my-resumes` – List of saved resumes (auth required)
+* `/templatename/templateid` – Edit selected template
+* `/my-resumes/:id` – Re-edit saved resume
+
+
+### 📦 Key Backend API Endpoints
+
+* `POST /api/auth/register` – Register user
+* `POST /api/auth/login` – Authenticate user and return token
+* `GET /api/templates/` – Get all templates
+* `GET /api/templates/:id` – Get template by ID
+* `POST /api/resumes/save` – Save resume data
+* `GET /api/resumes/user` – Get all resumes saved by user
+* `GET /api/resumes/:id` – Get specific resume data
+* `PUT /api/user/update-password` – Update password
+
+### 👨‍💻 Contribution
+
+**Contributions are welcome!**
+If you find bugs or want to add features, fork the repo and submit a pull request.
+
+---
+
+### 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+### 🙌 Acknowledgments
+
+Built with ❤️ by **Rajesh R**
+Thanks to the open-source tools, packages, and communities that made this project possible.
