@@ -1,7 +1,7 @@
 # 📄 Resumify - Resume Builder MERN App
 
 **Project Name**: Resumify  
-**Website Link**: [resumify-khaki.vercel.app](https://resumify-khaki.vercel.app/) *(Update after deployment)*
+**Website Link**: [resumify-khaki.vercel.app](https://resumify-khaki.vercel.app/)
 
 ---
 
