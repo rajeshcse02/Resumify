@@ -96,7 +96,7 @@ Visit http://localhost:5173 to view the application locally.
 4. Set the start command:
    
 ```bash
-npm run dev
+node server.js
 ```
 5. Add environment variables:
     - MONGO_URI
