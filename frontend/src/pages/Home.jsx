@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/templates')
+      .get(`${import.meta.env.VITE_API_BASE_URL}/api/templates`)
       .then((res) => {
         setTemplates(res.data);
         setLoading(false);
@@ -27,7 +27,7 @@ const Home = () => {
 
     if (user?.token) {
       axios
-        .get('http://localhost:5000/api/user-resumes', {
+        .get(`${import.meta.env.VITE_API_BASE_URL}/api/user-resumes`, {
           headers: { Authorization: `Bearer ${user.token}` },
         })
         .then((res) => setUserResumes(res.data))

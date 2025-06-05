@@ -13,7 +13,7 @@ const MyResumes = () => {
   useEffect(() => {
     const fetchResumes = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/user-resumes', {
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user-resumes`, {
           headers: {
             Authorization: `Bearer ${user?.token}`,
           },

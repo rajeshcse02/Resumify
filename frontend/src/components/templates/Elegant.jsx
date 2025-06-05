@@ -43,7 +43,7 @@ const Elegant = () => {
         const fetchData = async () => {
             if (templateId) {
                 // Load user's saved resume
-                const res = await fetch(`http://localhost:5000/api/user-resumes/${templateId}`, {
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user-resumes/${templateId}`, {
                     headers: { Authorization: `Bearer ${user?.token}` }
                 });
                 const data = await res.json();
@@ -51,7 +51,7 @@ const Elegant = () => {
                 setCustomSections(data.resumeData.customSections || []);
             } else {
                 // Load template dummy data
-                const res = await fetch(`http://localhost:5000/api/templates/${templateName}`);
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/templates/${templateName}`);
                 const data = await res.json();
                 setResume(data.dummyData);
                 setCustomSections(data.dummyData.customSections || []);
