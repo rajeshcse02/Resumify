@@ -90,10 +90,10 @@ Visit http://localhost:5173 to view the application locally.
 5. Deploy!
 <br/>
 🔸 Backend Deployment (Render)
-Push server/ folder to GitHub.
-Go to Render, create a new Web Service.
-Connect your GitHub repo.
-Set the start command:
+1. Push server/ folder to GitHub.
+2. Go to Render, create a new Web Service.
+3. Connect your GitHub repo.
+4. Set the start command:
 ```bash
 npm run dev
 ```
