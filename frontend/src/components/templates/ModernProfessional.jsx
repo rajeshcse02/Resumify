@@ -248,7 +248,7 @@ const ModernProfessional = () => {
                 templateName,
                 resumeData: { ...resume, customSections }
             };
-            await fetch('http://localhost:5000/api/user-resumes', {
+            await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user-resumes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

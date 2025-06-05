@@ -44,7 +44,7 @@ const MyResumes = () => {
     if (!window.confirm('Are you sure you want to delete this resume?')) return;
 
     try {
-      const res = await fetch(`http://localhost:5000/api/user-resumes/${id}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/user-resumes/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${user?.token}`,
