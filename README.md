@@ -7,7 +7,7 @@
 
 ## 🧠 Overview
 
-**Resumify** is a full-featured resume builder web application built with the **MERN stack**. It allows users to register, log in, and choose from professional resume templates. With real-time WYSIWYG editing, users can build, preview (in A4 layout), and download resumes as PDFs. The application includes secure authentication and personalized profile management, providing a seamless resume-building experience.
+**Resumify** is a full-featured resume builder web application built with the **MERN stack**. It allows users to register, log in, and choose from professional resume templates. With real-time WYSIWYG editing, users can build, preview (in A4 layout), and download resumes as PDF and PNG. The application providing a seamless resume-building experience.
 
 ![image](https://github.com/user-attachments/assets/0a484614-1e98-42c1-a2a0-9bf3d9d79d82)
 
@@ -19,9 +19,9 @@
 - 🧩 **Template Gallery** – Browse from multiple professional resume templates
 - ✍️ **Live Editing** – Real-time WYSIWYG editing with preview
 - 📄 **PDF Export** – Export resumes in consistent A4 format using jsPDF
+- 🖼️ **PNG Export** - Export resumes in PNG using html2canvas
 - 💾 **Save & Resume** – Save resume data and continue editing later
 - 🔐 **Protected Routes** – Auth-required access to `/profile`, `/my-resumes`, and edit pages
-- 📱 **Mobile Responsive** – Optimized layout across devices (mobile, tablet, desktop)
 - 🛠 **Profile Management** – Display email and secure password update feature
 
 ---
