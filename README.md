@@ -102,63 +102,18 @@ npm run dev
     - JWT_SECRET
 Deploy the backend.
 
-🧪 Folder Structure
-```bash
-resumify/
-├── client/                  # React frontend
-│   ├── src/
-│   │   ├── pages/           # Login, Register, Profile, MyResumes
-│   │   ├── templates/       # Resume templates (e.g., ModernProfessional.jsx)
-│   │   ├── components/      # Navbar, ProtectedRoute, etc.
-│   │   ├── context/         # AuthContext, ThemeContext
-│   │   └── App.jsx
-│   └── public/
-│
-├── server/                  # Express backend
-│   ├── routes/              # authRoutes.js, templates.js, userResumes.js
-│   ├── models/              # User, ResumeTemplate, etc.
-│   └── index.js             # Main server entry
-│
-└── README.md
-```
 🔐 Environment Variables
 Backend .env:
 ```bash
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 ```
-### 🔑 Key Frontend Routes
-
-* `/` – Homepage with all resume templates
-* `/login` – User login
-* `/register` – User registration
-* `/profile` – Profile page (shows email, allows password change)
-* `/my-resumes` – List of saved resumes (auth required)
-* `/templatename/templateid` – Edit selected template
-* `/my-resumes/:id` – Re-edit saved resume
-
-
-### 📦 Key Backend API Endpoints
-
-* `POST /api/auth/register` – Register user
-* `POST /api/auth/login` – Authenticate user and return token
-* `GET /api/templates/` – Get all templates
-* `GET /api/templates/:id` – Get template by ID
-* `POST /api/resumes/save` – Save resume data
-* `GET /api/resumes/user` – Get all resumes saved by user
-* `GET /api/resumes/:id` – Get specific resume data
-* `PUT /api/user/update-password` – Update password
 
 ### 👨‍💻 Contribution
 
 **Contributions are welcome!**
 If you find bugs or want to add features, fork the repo and submit a pull request.
 
----
-
-### 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
