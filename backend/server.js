@@ -12,8 +12,9 @@ dotenv.config();
 const app = express();
 
 const allowedOrigins = [
+  "https://resumify-khaki.vercel.app/",
   "http://localhost:5173",
-  "https://resumify-khaki.vercel.app/"
+  
 ];
 
 app.use(cors({
