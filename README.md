@@ -88,19 +88,20 @@ Visit http://localhost:5173 to view the application locally.
       - Output Directory: dist
 4. Add any environment variables if needed (API base URL).
 5. Deploy!
-<br/>
+   
 🔸 Backend Deployment (Render)
 1. Push server/ folder to GitHub.
 2. Go to Render, create a new Web Service.
 3. Connect your GitHub repo.
 4. Set the start command:
+   
 ```bash
 npm run dev
 ```
 5. Add environment variables:
     - MONGO_URI
     - JWT_SECRET
-Deploy the backend.
+6. Deploy the backend.
 
 🔐 Environment Variables
 Backend .env:
