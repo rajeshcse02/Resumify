@@ -11,8 +11,13 @@ import userResumesRoutes from './routes/userResumes.js';
 dotenv.config();
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://resumify-khaki.vercel.app/"
+];
+
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json({ limit: '5mb' }));
