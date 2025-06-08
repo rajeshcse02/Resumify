@@ -14,7 +14,7 @@ const Elegant = () => {
     const previewRef = useRef();
     const { templateName, templateId } = useParams();
     const { user } = useAuth();
-    const [forceDesktop, setForceDesktop] = useState(false);
+    const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     const isMobileDevice =
@@ -265,8 +265,10 @@ const Elegant = () => {
 
     if (!resume) return <div className="min-h-screen flex flex-col items-center pt-28 pb-4"> Loading....</div>; // or a loading spinner
 
+    // Loading state for save operation
+
+
     return (
-        
         <div className="min-h-screen flex flex-col justify-between items-center pt-28 py-12 bg-gray-50 dark:bg-[#18181b]">
             <div className="w-full flex flex-col items-center overflow-x-hidden">
                 <div
@@ -279,7 +281,6 @@ const Elegant = () => {
                         fontFamily: "Poppins, sans-serif",
                     }}
                 >
-                
                     {/* Header */}
                     <div className="bg-red-800 h-6 w-full"></div>
                     <div className="flex flex-col items-center justify-center text-black py-4">
@@ -463,7 +464,7 @@ const Elegant = () => {
                                                 {...contentEditableProps}
                                                 onBlur={(e) => handleSkillEdit(idx, e)}
                                             >
-                                                • {skill}
+                                                {skill}
                                             </span>
                                             <button
                                                 type="button"
@@ -599,10 +600,21 @@ const Elegant = () => {
                 </div>
                 <div className="flex justify-center gap-4 mt-4">
                     <button
-                        onClick={handleSaveResume}
+                        onClick={async () => {
+                            setSaving(true);
+                            await handleSaveResume();
+                            setSaving(false);
+                        }}
                         className="bg-gradient-to-r from-red-600 to-red-900 text-white px-8 py-3 rounded-xl font-bold shadow-lg hover:scale-105 transition"
+                        disabled={saving}
                     >
-                        Save Resume
+                        {saving ? (
+                            <span className="flex items-center gap-2">
+                                Saving...
+                            </span>
+                        ) : (
+                            "Save Resume"
+                        )}
                     </button>
                     <button
                         onClick={downloadPDF}
