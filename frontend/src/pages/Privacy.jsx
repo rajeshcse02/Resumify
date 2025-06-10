@@ -30,9 +30,9 @@ const Privacy = () => {
                 <p className="text-gray-800 dark:text-gray-300 mb-4">
                     You have the right to access, update, or delete your personal information. Contact us for assistance.
                 </p>
-                <p className="text-gray-800 dark:text-gray-300">
+                {/* <p className="text-gray-800 dark:text-gray-300">
                     For more details, feel free to reach out to us at <a href="mailto:support@resumify.com" className="text-blue-600 dark:text-cyan-400 hover:underline">support@resumify.com</a>.
-                </p>
+                </p> */}
             </div>
         </div>
     );
